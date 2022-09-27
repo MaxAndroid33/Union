@@ -225,7 +225,16 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 6px;
 }
+
+.nav-toggle-btn span{
+    background: var(--white);
+    width: 30px;
+    height: 2px;
+    transition: var(--default-transition);
+}
+
 
 
 
