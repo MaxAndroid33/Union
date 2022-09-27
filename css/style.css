@@ -26,12 +26,13 @@ a {
 }
 
 img,
-span a,
+span,
+a,
 ion-icon {
     display: block;
 }
 
-button{
+button {
     background: none;
     border: none;
     font: inherit;
@@ -39,33 +40,78 @@ button{
 
 }
 
-html{
-    font-family: "Jost" ,sans-serif;
+html {
+    font-family: var(--fontfamily);;
     scroll-behavior: smooth;
 
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 5px;
 
 }
-::-webkit-scrollbar-track{
-    background:var(--light-gray);
+
+::-webkit-scrollbar-track {
+    background: var(--light-gray);
 
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: var( --red-orange-color-wheel);
+    background: var(--red-orange-color-wheel);
 
 }
-::-webkit-scrollbar-thumb:hover{
-    background: var( --ultramarine-blue);
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ultramarine-blue);
 }
 
 
 /*  # Component  */
 
+.btn {
+    position: relative;
+    font-family: var(--font-family);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-5);
+    color: var(--white);
+    padding: 20px 45px;
+    text-align: uppercase;
+    overflow: hidden;
 
+}
+
+.btn .btn-text {
+    position: relative;
+    z-index: 5;
+}
+
+.btn-primary {
+    background-color: var(--red-orange-color-wheel);
+    border-radius: 20px;
+}
+
+.btn .square {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: var(--oxford-blue);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    transition: var(--default-transition);
+ 
+}
+
+.btn:hover  .square{
+    right: -2px;
+    width: 102%;
+    height: 102%;
+}
+.btn-primary .square {
+    background: var(--oxford-blue);
+}
 
 
 
@@ -77,7 +123,7 @@ html{
 
 /*     # Main       */
 
-.container{
+.container {
     background: var(--white);
     max-width: 1440px;
     margin: auto;
@@ -89,7 +135,7 @@ html{
 
 
 
-.navbar{
+.navbar {
     position: fixed;
     top: 0;
     left: 50%;
@@ -107,57 +153,154 @@ html{
 
 
 }
-/* Drop-Down Navigation */
-ul.navbar-nav li:hover > ul
-{
-/*these 2 styles are very important,
-being the ones which make the drop-down to appear on hover */
-    visibility:visible;
-    opacity:1;
+
+.navbar-nav {
+
+    position: absolute;
+    background: var(--white);
+    top: calc(100% + 40px);
+    left: 30px;
+    right: 30px;
+    text-align: center;
+    box-shadow: 0 10px 20px -5px hsla(0, 0%, 0%, 0.25);
+    padding: 30px;
+    border-radius: 8px;
+    opacity: 0;
+    transform: scale(0.0);
+    pointer-events: none;
+
+
 }
-ul.navbar-nav ul, ul.navbar-nav ul li ul {
+
+.nav-item a {
+
+    padding: 10px;
+    font-size: var(--fs-5);
+    font-weight: var(--fw-6);
+    color: var(--oxford-blue);
+    transition: var(--default-transition);
+
+}
+
+.nav-item:not(:last-child) a {
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+}
+
+.nav-item a:hover {
+    color: var(--red-orange-color-wheel) !important;
+}
+
+.navbar-nav.active {
+    animation: menuPopup 0.5s ease forwards;
+    pointer-events: all;
+
+}
+
+@keyframes menuPopup {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.1);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Drop-Down Navigation */
+ul#navigation li:hover>ul {
+    /*these 2 styles are very important,
+being the ones which make the drop-down to appear on hover */
+    visibility: visible;
+
+    opacity: 1;
+
+}
+
+ul#navigation ul,
+ul#navigation ul li ul {
     list-style: none;
     margin: 0;
     padding: 0;
-/*the next 2 styles are very important,
+    left: 30px;
+    right: 30px;
+    /*the next 2 styles are very important,
 being the ones which make the drop-down to stay hidden */
-    visibility:hidden;
-    opacity:0;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
+
+    padding: 30px;
+    border-radius: 8px;
     z-index: 99999;
-    width:190px;
-    background:#f8f8f8;
-    box-shadow:1px 1px 3px #ccc;
-/* css3 transitions for smooth hover effect */
-    -webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
-    -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
-    -o-transition:opacity 0.2s linear, visibility 0.2s linear;
-    transition:opacity 0.2s linear, visibility 0.2s linear;
+    width: max-content;
+    margin: auto;
+
+    background: var(--white);
+    box-shadow: 1px 1px 3px rgb(227, 17, 17);
+    border-radius: 20px;
+    /* css3 transitions for smooth hover effect */
+    -webkit-transition: opacity 0.2s linear, visibility 0.2s linear;
+    -moz-transition: opacity 0.2s linear, visibility 0.2s linear;
+    -o-transition: opacity 0.2s linear, visibility 0.2s linear;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
 }
 
- 
-ul.navbar-nav ul li ul {
-    top: 0;
-    left: 181px; /* strong related to width:180px; from above */
+
+ul#navigation ul li ul {
+    width: max-content;
+    top: 50%;
+    left: 65%;
+    right: inherit;
+    /* top: 100px;
+    left:200px; strong related to width:180px; from above */
+
 }
- 
-ul.navbar-nav ul li {
-    clear:both;
-    width:100%;
-    border:0 none;
-    border-bottom:1px solid #c9c9c9;
+
+ul#navigation ul li {
+    clear: both;
+    width: 100%;
+
+
+    border: 0 none;
+    border-bottom: 1px solid #c9c9c9;
+
 }
- 
-ul.navbar-nav ul li a {
-    background:none;
-    padding:7px 15px;
-    color:#616161;
-    text-shadow:1px 1px 0px #fff;
-    text-decoration:none;
-    display:inline-block;
-    border:0 none;
-    float:left;
-    clear:both;
-    width:190px;
+
+ul#navigation ul li a {
+    background: none;
+    padding: 10px;
+    font-size: var(--fs-6);
+    font-weight: var(--fw-6);
+    color: var(--oxford-blue);
+    transition: var(--default-transition);
+    text-shadow: 1px 1px 0px #fff;
+    text-decoration: none;
+    display: inline-block;
+    border: 0 none;
+    width: auto;
+    clear: both;
+
 }
- 
