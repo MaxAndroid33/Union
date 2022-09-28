@@ -383,8 +383,51 @@ html {
     gap: 30px;
 }
 
+.home-right .img-box {
+    position: relative;
+}
 
+.home-right .img-box img {
+    position: absolute;
+}
 
+.home-right .img-box .banner-img {
+    position: relative;
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+    z-index: 2;
+}
+
+.home-right .background-shap {
+    width: auto;
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.home-right .icon-1 {
+    top: 200px;
+    left: 20px;
+
+}
+
+.home-right .icon-2,
+.home-right .icon-3 {
+    display: none;
+}
+
+.home-right .icon-4{
+    top:60px;
+    right: 20px;
+    filter: drop-shadow(0 8px 38px hsla(350 ,100% ,68% ,0.5));
+}
+
+.icon-1 ,.icon-2 , .icon-3 ,.icon-4{
+    filter: drop-shadow(0 10px 20px hsla(0 ,0% ,0% ,0.2));
+    z-index: 5;
+}
 
 
 
