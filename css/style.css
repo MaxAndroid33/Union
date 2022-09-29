@@ -85,6 +85,8 @@ html {
 .btn .btn-text {
     position: relative;
     z-index: 5;
+    font-size: var(--fs-4);
+    font-family: var(--font-family);
 }
 
 .btn-secondary .square,
@@ -161,12 +163,12 @@ html {
 
 .navbar {
     position: fixed;
-    top: 0;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 1440px;
-    background: hsla(0, 0%, 100%, 0.9);
+   
+    background: hsla(0, 0%, 100%, 0%);
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-between;
@@ -174,8 +176,15 @@ html {
     padding: 10px var(--px);
     box-shadow: 0 10px 20px -5px hsla(0, 0%, 0%, 0.03);
     z-index: 100;
+    border-radius: 2rem;
+    
 
 
+}
+.navbar img{
+    padding:0;
+    margin-left: 100px;
+    width: 150px;
 }
 
 .navbar-nav {

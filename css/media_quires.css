@@ -55,7 +55,7 @@
     .nav-item a {
         border-bottom: 0 !important; 
         padding: 10px;
-        font-size: var(--fs-5);
+        font-size: var(--fs-3);
         font-weight: var(--fw-6);
         color: var(--oxford-blue);
         transition: var(--default-transition);
@@ -73,10 +73,34 @@
         background-position :0 !important;
 
     }
-    
+
     .nav-toggle-btn{display: none;}
 
     .navbar .btn {display: block;}
+    .navbar-nav {
+        animation: menuPopup 1s linear forwards;
+        pointer-events: all;
+        transition: all;
+    
+    }
+    
+    @keyframes menuPopup {
+        0% {
+            opacity: 0;
+            transform: translateX(-20px);
+    
+        }
+    
+        50% {
+            transform: translateX(-20px);
+    
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateX(-20px);
+        }
+    }
 }
 
 
