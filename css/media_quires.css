@@ -27,7 +27,7 @@
    :root{
     --red-orange-color-wheel: hsl(15, 100%, 55%);
     --oxford-blue: hsl(229, 84%, 12%);
-    --default-transition: 0.25s ease;
+    --default-transition: 1s ease;
 
     --fs-5: 16px;
     --px:20px;
@@ -49,13 +49,13 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 40px;
+        gap: 50px;
         direction: rtl;
     }
     .nav-item a {
         border-bottom: 0 !important; 
         padding: 10px;
-        font-size: var(--fs-3);
+        font-size: var(--fs-4);
         font-weight: var(--fw-6);
         color: var(--oxford-blue);
         transition: var(--default-transition);
@@ -78,7 +78,7 @@
 
     .navbar .btn {display: block;}
     .navbar-nav {
-        animation: menuPopup 1s linear forwards;
+        animation: menuPopup 1s ease-in-out forwards;
         pointer-events: all;
         transition: all;
     
