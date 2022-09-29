@@ -17,7 +17,7 @@
     50%,
     80%,
     100% {
-        transform: skew(4)
+        transform: skew(4);
     }
 
     40% {
@@ -28,4 +28,27 @@
         transform: scale(4);
     }
 
+}
+.home .icon-4 {
+    animation: drop ease 1s infinite;
+    transition: all;
+
+}
+@keyframes drop {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(10%);
+    }
+
+    60% {
+        transform:translateY(-30%);
+    }
 }

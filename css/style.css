@@ -85,7 +85,7 @@ html {
 .btn .btn-text {
     position: relative;
     z-index: 5;
-    font-size: var(--fs-5);
+    font-size: var(--fs-8);
     font-family: var(--font-family);
 }
 
@@ -166,7 +166,7 @@ html {
     width: 100%;
 
     background: hsla(0, 0%, 100%, 0%);
-    backdrop-filter: blur(15px);
+    /* backdrop-filter: blur(15px); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -328,12 +328,12 @@ html {
 }
 
 .home .shape-1 {
-    top: 14px;
+    top: 20px;
     left: 8%;
 }
 
 .home .shape-2 {
-    top: 600px;
+    top: 380px;
     left: 30px;
 }
 
@@ -345,7 +345,11 @@ html {
 
 .home .shape-4 {
     top: 570px;
-    right: 110px;
+    right: 10px;
+}
+.home .icon-4{
+    top: 80px;
+    right: 30px;
 }
 
 .home-left {
