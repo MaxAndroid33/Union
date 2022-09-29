@@ -1,44 +1,43 @@
-
-
-
-@media (min-width :370px){
+@media (min-width :370px) {
 
     /* variable */
-:root{
-    --fs-1: 50px;
-    --fs-2: 45px;
-    --fs-7: 18px;
+    :root {
+        --fs-1: 50px;
+        --fs-2: 45px;
+        --fs-7: 18px;
 
-    --px:30px;
+        --px: 30px;
 
-}
+    }
 
-.section-subtitle{
-    font-size: var(--fs-7);
-}
+    .section-subtitle {
+        font-size: var(--fs-7);
+    }
 
-      /* home */
-
-}
-
-
-@media(min-width:992px){
-   /* variable */
-   :root{
-    --red-orange-color-wheel: hsl(15, 100%, 55%);
-    --oxford-blue: hsl(229, 84%, 12%);
-    --default-transition: 1s ease;
-
-    --fs-5: 16px;
-    --px:20px;
+    /* home */
 
 }
+
+
+@media(min-width:992px) {
+
+    /* variable */
+    :root {
+        --red-orange-color-wheel: hsl(15, 100%, 55%);
+        --oxford-blue: hsl(229, 84%, 12%);
+        --default-transition: 1s ease;
+
+        --fs-5: 16px;
+        --px: 20px;
+
+    }
 
     /* header */
-    .navbar{
+    .navbar {
         padding: 5px var(--px);
     }
-    .navbar-nav{
+
+    .navbar-nav {
         background: transparent;
         position: static;
         box-shadow: none;
@@ -52,72 +51,60 @@
         gap: 50px;
         direction: rtl;
     }
+
     .nav-item a {
-        border-bottom: 0 !important; 
+        border-bottom: 0 !important;
         padding: 10px;
         font-size: var(--fs-4);
         font-weight: var(--fw-6);
         color: var(--oxford-blue);
         transition: var(--default-transition);
-    
+
     }
-    .nav-item:not(:last-child) a{
+
+    .nav-item:not(:last-child) a {
         border-bottom: none !important;
     }
 
-    .navbar-nav .nav-item  a:hover {
+    .navbar-nav .nav-item a:hover {
         background: none !important;
-        color:var( --oxford-blue) !important ;
-        transform: translate(0%,-10%) !important;
+        color: var(--oxford-blue) !important;
+        transform: translate(0%, -10%) !important;
         border-bottom: 10px solid var(--red-orange-color-wheel) !important;
-        background-position :0 !important;
+        background-position: 0 !important;
 
     }
 
-    .nav-toggle-btn{display: none;}
+    .nav-toggle-btn {
+        display: none;
+    }
 
-    .navbar .btn {display: block;}
+    .navbar .btn {
+        display: block;
+    }
+
     .navbar-nav {
         animation: menuPopup 1s ease-in-out forwards;
         pointer-events: all;
         transition: all;
-    
+
     }
-    
+
     @keyframes menuPopup {
         0% {
             opacity: 0;
             transform: translateX(-20px);
-    
+
         }
-    
+
         50% {
             transform: translateX(-20px);
-    
+
         }
-    
+
         100% {
             opacity: 1;
             transform: translateX(-20px);
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

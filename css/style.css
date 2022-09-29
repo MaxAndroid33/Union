@@ -127,9 +127,11 @@ html {
 /* # Reused Style  */
 
 .section-subtitle {
-    color: var(--ultramarine-blue);
-    font-weight: var(--fs-7);
-    text-transform: uppercase;
+    color: var(--blue-crayola);
+    font-weight: var(--fw-3);
+    font-style: italic;
+
+
 
 }
 
@@ -139,11 +141,6 @@ html {
     font-size: var(--fs-6);
     line-height: 1.6;
 }
-
-
-
-
-
 
 
 
@@ -167,7 +164,7 @@ html {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-   
+
     background: hsla(0, 0%, 100%, 0%);
     backdrop-filter: blur(15px);
     display: flex;
@@ -177,12 +174,13 @@ html {
     box-shadow: 0 10px 20px -5px hsla(0, 0%, 0%, 0.03);
     z-index: 100;
     border-radius: 2rem;
-    
+
 
 
 }
-.navbar img{
-    padding:0;
+
+.navbar img {
+    padding: 0;
     margin-left: 10px;
     width: 150px;
 }
@@ -362,6 +360,7 @@ html {
 .home .section-subtitle {
     text-align: center;
     margin-bottom: 25px;
+    font-size: var(--fs-2);
 
 }
 
