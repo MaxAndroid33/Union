@@ -148,7 +148,7 @@ html {
 
 .container {
     background: var(--white);
-    max-width: 1440px;
+    box-sizing: border-box;
     margin: auto;
     overflow: hidden;
 }
@@ -294,6 +294,7 @@ html {
     margin-top: 70px;
     padding: var(--py) var(--px) 0;
     overflow: hidden;
+    
 }
 
 .home ::before {
