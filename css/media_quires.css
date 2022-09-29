@@ -197,7 +197,7 @@
     .nav-item a {
         border-bottom: 0 !important;
         padding: 10px;
-        font-size: var(--fs-4);
+        font-size: var(--fs-6);
         font-weight: var(--fw-6);
         color: var(--oxford-blue);
         transition: var(--default-transition);

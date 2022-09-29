@@ -76,7 +76,7 @@ html {
     font-size: var(--fs-6);
     font-weight: var(--fw-5);
     color: var(--white);
-    padding: 20px 45px;
+    padding: 10px 40px;
     text-align: uppercase;
     overflow: hidden;
 
@@ -85,7 +85,7 @@ html {
 .btn .btn-text {
     position: relative;
     z-index: 5;
-    font-size: var(--fs-8);
+    font-size: var(--fs-6);
     font-family: var(--font-family);
 }
 
@@ -207,7 +207,7 @@ html {
 .nav-item a {
 
     padding: 10px;
-    font-size: var(--fs-5);
+    font-size: var(--fs-7);
     font-weight: var(--fw-6);
     color: var(--oxford-blue);
     transition: var(--default-transition);
