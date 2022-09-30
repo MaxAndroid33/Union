@@ -5,10 +5,16 @@
 
 }
 
-.animetion-btn:hover {
-    animation: normal;
+.btn .animetion-btn:hover .btn-text{
+    width: 102%;
+    color: white !important;
+   animation: go none;
 }
-
+.btn .btn-secondary .square:hover {
+    width: 102%;
+   
+   animation: go none;
+}
 
 @keyframes go {
 

@@ -1,0 +1,108 @@
+@import url(../css/variables.css);
+
+@media(min-width:992px) {
+
+    /* variable */
+    :root {
+        --red-orange-color-wheel: hsl(15, 100%, 55%);
+        --oxford-blue: hsl(229, 84%, 12%);
+        --default-transition: 0.25s ease;
+
+        --fs-5: 15px;
+        --px: 20px;
+
+    }
+
+    /* header */
+    .btn:hover .square {
+        left: -1px;
+        width: 102%;
+        height: 102%;
+        transform: scale(3);
+        color: white !important;
+        animation: go none;
+       
+    
+    }
+    .navbar {
+        padding: 5px var(--px);
+    }
+
+    .navbar-nav {
+        background: transparent;
+        position: static;
+        
+        padding: 0;
+        opacity: 1;
+        margin-left: 150px;
+        pointer-events: all;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 50px;
+        direction: rtl;
+    }
+
+    .nav-item a {
+        border-bottom: 0 !important;
+        padding: 10px;
+        font-size: var(--fs-5);
+        font-weight: var(10%);
+        color: white;
+        transition: var(--default-transition);
+
+
+    }
+
+    .nav-item:not(:last-child) a {
+        border-bottom: none !important;
+    }
+
+    .navbar-nav .nav-item a:hover {
+        background: none !important;
+        color: white !important;
+        transform: translate(0%, -10%) !important;
+        border-bottom: 0 solid #8A2387 !important;
+        border-left: 10px solid #8A2387 !important;
+        /* border-right: 2px solid #8A2387 !important; */
+        background-position: 0 !important;
+       
+        border-radius: 10px !important;
+       
+
+    }
+
+    .nav-toggle-btn {
+        display: none;
+    }
+
+    .navbar .btn {
+        display: block;
+    }
+
+    .navbar-nav {
+        animation: menuPopup 0.5s ease-in-out forwards;
+        pointer-events: all;
+        transition: all;
+
+    }
+
+    @keyframes menuPopup {
+        0% {
+            opacity: 0;
+            transform: translateX(-20px);
+
+        }
+
+        50% {
+            transform: translateX(-20px);
+
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(-20px);
+        }
+    }
+}
